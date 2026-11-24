@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Asistente de IA del clan: estado de carga."
+    />
+    <title>Pensando | Asistente del clan</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+    <link rel="stylesheet" href="../css/styles.css" />
+  </head>
+  <body class="flex min-h-screen flex-col">
+    <header class="cabecera border-b">
+      <div
+        class="mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-x-4 gap-y-3 px-4 py-3"
+      >
+        <a href="../index.html" class="marca text-xl">Asistente del clan</a>
+        <nav
+          aria-label="Estados de la maqueta"
+          class="order-last w-full lg:order-none lg:w-auto"
+        >
+          <ul class="flex flex-wrap gap-2 text-sm">
+            <li>
+              <a
+                href="../index.html"
+                class="enlace-estado rounded-full border px-3 py-1"
+                >Vacío</a
+              >
+            </li>
+            <li>
+              <a
+                href="cargando.html"
+                class="enlace-estado rounded-full border px-3 py-1"
+                aria-current="page"
+                >Cargando</a
+              >
+            </li>
+            <li>
+              <a
+                href="respuesta.html"
+                class="enlace-estado rounded-full border px-3 py-1"
+                >Respuesta</a
+              >
+            </li>
+            <li>
+              <a
+                href="error.html"
+                class="enlace-estado rounded-full border px-3 py-1"
+                >Error</a
+              >
+            </li>
+          </ul>
+        </nav>
+        <a
+          href="#"
+          class="btn-coach rounded-lg border px-4 py-2 text-sm font-semibold"
+          >Hablar con un coach</a
+        >
+      </div>
+    </header>
+
+    <div
+      class="mx-auto flex w-full max-w-6xl flex-1 flex-col gap-6 px-4 py-6 lg:flex-row"
+    >
+      <main class="min-w-0 flex-1">
+        <section
+          aria-labelledby="titulo-estado"
+          class="mx-auto flex w-full max-w-2xl flex-col gap-4"
+        >
+          <h1 id="titulo-estado" class="sr-only">Pensando la respuesta</h1>
+          <p
+            class="burbuja-usuario max-w-xl self-end rounded-2xl rounded-br-sm px-4 py-3"
+          >
+            ¿Cuándo es la sesión de IA?
+          </p>
+          <div class="flex items-start gap-3" role="status">
+            <span
+              class="avatar flex size-9 shrink-0 items-center justify-center rounded-full text-sm font-semibold"
+              aria-hidden="true"
+              >IA</span
+            >
+            <p
+              class="burbuja-ia flex items-center gap-3 rounded-2xl rounded-tl-sm border px-4 py-3"
+            >
+              <span
+                class="flex animate-pulse gap-1 motion-reduce:animate-none"
+                aria-hidden="true"
+              >
+                <span class="punto size-2 rounded-full"></span>
+                <span class="punto size-2 rounded-full"></span>
+                <span class="punto size-2 rounded-full"></span>
+              </span>
+              Pensando…
+            </p>
+          </div>
+          <p class="texto-suave text-center text-sm">
+            En esta maqueta la respuesta no llega sola.
+            <a href="respuesta.html" class="enlace">Ver la respuesta</a> o
+            <a href="error.html" class="enlace">ver el error</a>.
+          </p>
+        </section>
+      </main>
+
+      <aside
+        class="panel hidden rounded-xl border p-5 lg:block lg:w-80 lg:shrink-0 lg:self-start"
+        aria-labelledby="titulo-limites"
+      >
+        <h2 id="titulo-limites" class="text-lg font-semibold">
+          Qué puedo y qué no
+        </h2>
+        <h3 class="mt-4 font-semibold">Puedo</h3>
+        <ul class="texto-suave mt-2 list-disc space-y-1 pl-5 text-sm">
+          <li>Resolver dudas de fechas, entregas y reglas de la cohorte.</li>
+          <li>Mostrarte la fuente de cada respuesta para que la verifiques.</li>
+        </ul>
+        <h3 class="mt-4 font-semibold">No puedo</h3>
+        <ul class="texto-suave mt-2 list-disc space-y-1 pl-5 text-sm">
+          <li>Darte notas ni evaluar tus retos.</li>
+          <li>Reemplazar a un coach en temas personales o urgentes.</li>
+          <li>Garantizar que siempre acierto: puedo equivocarme.</li>
+        </ul>
+        <a
+          href="#"
+          class="btn-coach mt-5 block rounded-lg border px-4 py-2 text-center text-sm font-semibold"
+          >Hablar con un coach</a
+        >
+      </aside>
+    </div>
+
+    <div class="barra sticky bottom-0 border-t">
+      <div class="mx-auto flex w-full max-w-3xl flex-col gap-2 px-4 py-3">
+        <form action="cargando.html" method="get" class="consulta">
+          <label for="pregunta" class="sr-only">Escribe tu pregunta</label>
+          <input
+            type="text"
+            id="pregunta"
+            name="pregunta"
+            placeholder="¿Cuándo es la sesión de IA?"
+            autocomplete="off"
+            class="campo min-w-0 flex-1 rounded-lg border px-4 py-3"
+          />
+          <button
+            type="submit"
+            class="btn-primario rounded-lg px-5 py-3 font-semibold"
+          >
+            Enviar
+          </button>
+        </form>
+        <footer>
+          <p class="aviso rounded-lg border px-3 py-2 text-xs" role="note">
+            Las respuestas son generadas por IA y pueden contener errores.
+            Confirma siempre en la fuente citada.
+          </p>
+        </footer>
+      </div>
+    </div>
+  </body>
+</html>

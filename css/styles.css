@@ -1,0 +1,190 @@
+:root {
+  --fondo-noche: #020617;
+  --superficie: #0f172a;
+  --superficie-clara: #1e293b;
+  --borde-suave: #334155;
+  --texto-claro: #f1f5f9;
+  --texto-suave: #cbd5e1;
+  --texto-tenue: #94a3b8;
+  --violeta-acento: #a78bfa;
+  --violeta-fuerte: #7c3aed;
+  --violeta-oscuro: #6d28d9;
+  --ambar-aviso: #fbbf24;
+  --ambar-fondo: #2a1f05;
+  --rojo-error: #f87171;
+  --rojo-fondo: #2a0f14;
+  --fuente-base: "Poppins", sans-serif;
+  --espacio-sm: 0.5rem;
+  --espacio-md: 1rem;
+}
+
+body {
+  font-family: var(--fuente-base);
+  font-weight: 400;
+  color: var(--texto-claro);
+  background-color: var(--fondo-noche);
+}
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible {
+  outline: 2px solid var(--violeta-acento);
+  outline-offset: 2px;
+}
+
+.cabecera,
+.barra {
+  background-color: var(--superficie);
+  border-color: var(--borde-suave);
+}
+
+.marca {
+  color: var(--violeta-acento);
+  font-weight: 600;
+}
+
+.enlace-estado {
+  color: var(--texto-suave);
+  border-color: var(--borde-suave);
+}
+
+.enlace-estado:hover {
+  color: var(--texto-claro);
+  border-color: var(--violeta-acento);
+}
+
+.enlace-estado[aria-current="page"] {
+  color: #ffffff;
+  background-color: var(--violeta-fuerte);
+  border-color: var(--violeta-fuerte);
+}
+
+.btn-coach {
+  color: var(--violeta-acento);
+  border-color: var(--violeta-acento);
+  background-color: transparent;
+}
+
+.btn-coach:hover {
+  color: var(--fondo-noche);
+  background-color: var(--violeta-acento);
+}
+
+.btn-primario {
+  color: #ffffff;
+  background-color: var(--violeta-fuerte);
+}
+
+.btn-primario:hover {
+  background-color: var(--violeta-oscuro);
+}
+
+.btn-secundario {
+  color: var(--texto-claro);
+  background-color: var(--superficie-clara);
+  border-color: var(--borde-suave);
+}
+
+.btn-secundario:hover {
+  border-color: var(--violeta-acento);
+}
+
+.chip {
+  color: var(--texto-claro);
+  background-color: var(--superficie);
+  border-color: var(--borde-suave);
+}
+
+.chip:hover {
+  background-color: var(--superficie-clara);
+  border-color: var(--violeta-acento);
+}
+
+.panel {
+  background-color: var(--superficie);
+  border-color: var(--borde-suave);
+}
+
+.texto-suave {
+  color: var(--texto-suave);
+}
+
+.avatar {
+  color: var(--fondo-noche);
+  background-color: var(--violeta-acento);
+}
+
+.punto {
+  background-color: var(--violeta-acento);
+}
+
+.burbuja-usuario {
+  color: #ffffff;
+  background-color: var(--violeta-fuerte);
+}
+
+.burbuja-ia {
+  color: var(--texto-claro);
+  background-color: var(--superficie-clara);
+  border-color: var(--borde-suave);
+}
+
+.burbuja-error {
+  background-color: var(--rojo-fondo);
+  border-color: var(--rojo-error);
+}
+
+.titulo-error {
+  color: var(--rojo-error);
+}
+
+.fuente {
+  border-color: var(--borde-suave);
+}
+
+.enlace {
+  color: var(--violeta-acento);
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+.enlace:hover {
+  color: var(--texto-claro);
+}
+
+.aviso {
+  color: var(--ambar-aviso);
+  background-color: var(--ambar-fondo);
+  border-color: var(--ambar-aviso);
+}
+
+.campo {
+  color: var(--texto-claro);
+  background-color: var(--fondo-noche);
+  border-color: var(--borde-suave);
+}
+
+.campo::placeholder {
+  color: var(--texto-tenue);
+}
+
+.campo:focus {
+  border-color: var(--violeta-acento);
+}
+
+.consulta {
+  display: flex;
+  gap: var(--espacio-sm);
+}
+
+.acciones {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--espacio-sm);
+}
+
+.sugerencias {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(14rem, 1fr));
+  gap: var(--espacio-md);
+}
